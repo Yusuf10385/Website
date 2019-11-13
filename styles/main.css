@@ -1,28 +1,44 @@
-h1 {
-    font-family: 'Lobster', cursive;
+* {
+    margin: 0;
+    padding: 0;
 }
+body{
+    font: 14px Georgia, serif;
+}
+#page-wrap {
+    width: 240px;
+    margin: 20px auto;
 
-.item {
-   text-align: 200px;
-   border-radius: 100%;
-   height: 240px;
-   width: 240px;
 }
+a {
+    text-decoration: none;
+    color: black;
+}
+#switcher-wrapper {
+    width: 240px;
+    margin: 20px auto;
+    position: relative;
+}
+#switcher-wrapper a{
+    display: block;
+    width: 240px;
+    height: 160px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#one{ background:url(../images/mountain.jpg); }
+#two{ background:url(../images/sea.jpg); }
 
-img {
-    border-style: none;
-    border-radius: 100%;
-    filter: grayscale(0);
+#switcher-wrapper a span {
+    position: absolute;
 }
-.container:hover{
-    filter: grayscale(1);
-    border-style: none;
-    border-radius: 100%;
-    transition: background-size 0.3s ease;
-    filter: grayscale(1);
-    transition: background-size 0.3s ease; 
+#one span { 
+    left: 0;
+    bottom: -35px;
 }
-
- body {
-     text-align: center;
- }
+#two span { 
+    left: 120px;
+    bottom: -35px;
+}
+#switcher-wrapper a:hover { z-index: 1;}
