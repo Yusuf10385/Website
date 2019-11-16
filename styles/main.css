@@ -4,41 +4,93 @@
 }
 body{
     font: 14px Georgia, serif;
+    background:url(../images/background3.jpg) ;
+    background-size: cover;
 }
-#page-wrap {
-    width: 240px;
-    margin: 20px auto;
+h1{
+    text-align: center;
+}
 
+/*this line of code adjusts the position of all the icons*/
+.social-menu ul {
+    position: absolute;
+    top: 100%;
+    left: 15%;
+    margin: 0;
+    padding: 0;
+    transform:translate(-50%, -50%);
+    display: flex;
 }
-a {
-    text-decoration: none;
-    color: black;
+/*this removes the bullet points and creates 15px of space between the icons*/
+.social-menu ul li {
+    list-style: none;
+    margin: 0 15px;
 }
-#switcher-wrapper {
-    width: 240px;
-    margin: 20px auto;
+.social-menu ul li .fa {
+    font-size: 30px;
+    line-height: 60px;
+    transition: .6s;
+}
+.social-menu ul li .fa:hover{
+    color:#fff;
+}
+.social-menu ul li a {
     position: relative;
-}
-#switcher-wrapper a{
     display: block;
-    width: 240px;
-    height: 160px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    transition: .6s;
+    box-shadow: 0 5px 4px rgba(0,0,0,.5);
 }
-#one{ background:url(../images/mountain.jpg); }
-#two{ background:url(../images/sea.jpg); }
+/*these are the code for hover*/
+.social-menu ul li a:hover{
+    transform: translate(0, -10px);
+}
+/*this determines the colour of the icons*/
+.social-menu ul li:nth-child(1) a:hover {
+    background-color:#3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover {
+    background-color:#55acee;
+}
+.social-menu ul li:nth-child(3) a:hover {
+    background-color:#171515;
+}
+.social-menu ul li:nth-child(4) a:hover {
+    background-color:#0077B5;
+}
 
-#switcher-wrapper a span {
-    position: absolute;
+#ih{
+    position: relative;
+    height:160px;
+    width:240px;
+    margin: 20px auto;
+    
 }
-#one span { 
-    left: 0;
-    bottom: -35px;
+#ih img{
+    position:absolute;
+    display: block;
+    left:0px;
+    width:240px;height:160;
+    border-radius: 50%;
+    transition:opacity 3s ease-in-out;
 }
-#two span { 
-    left: 120px;
-    bottom: -35px;
+#ih img.top:hover{
+    opacity:0;
 }
-#switcher-wrapper a:hover { z-index: 1;}
+.boxed{
+    position: relative;
+    border:5px solid black;
+    height:auto;
+    width:420px;
+    margin: 20px auto;
+}
+p{
+    text-align: center;
+    font-size: 25px;
+    font-style: oblique;
+    color: white
+}
