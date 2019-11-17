@@ -2,25 +2,31 @@
     margin: 0;
     padding: 0;
 }
+/*This sets the font size and the background image*/
 body{
     font: 14px Georgia, serif;
-    background:url(../images/background3.jpg) ;
+    background:url(../images/dark.jpg) ;
     background-size: cover;
 }
+/*These are the properties for the header*/
 h1{
     text-align: center;
+    color: whitesmoke;
+    font-family: 'Indie Flower', cursive;
+    font-size: 50px;
 }
 
 /*this line of code adjusts the position of all the icons*/
 .social-menu ul {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 95%;
     left: 15%;
     margin: 0;
     padding: 0;
     transform:translate(-50%, -50%);
     display: flex;
 }
+/*https://www.youtube.com/watch?v=hqlu47FX_q8*/
 /*this removes the bullet points and creates 15px of space between the icons*/
 .social-menu ul li {
     list-style: none;
@@ -63,31 +69,39 @@ h1{
     background-color:#0077B5;
 }
 
+/*https://www.youtube.com/watch?v=Sm72hlTVOOg*/
+/*This states the positioning and size of the div element #ih*/
 #ih{
     position: relative;
     height:160px;
     width:240px;
-    margin: 20px auto;
+    margin: 10px auto;
     
 }
+/*These properties suggest how the image is going to be positioned as well as the size*/
+/*The transition also states how long the image is going to fade to the next image, in this case 3seconds*/
 #ih img{
-    position:absolute;
+    position:fixed;
     display: block;
-    left:0px;
+    left:560px;
     width:240px;height:160;
     border-radius: 50%;
     transition:opacity 3s ease-in-out;
 }
+/*This property causes a smooth fade transition*/
 #ih img.top:hover{
     opacity:0;
 }
+/*https://www.thesitewizard.com/css/rectangular-box-border.shtml*/
+/* This sets the size and position of the border around the block of text*/
 .boxed{
     position: relative;
     border:5px solid black;
     height:auto;
     width:420px;
-    margin: 20px auto;
+    margin: 10px auto;
 }
+/*This code styles how the paragraph in the border is going to look like*/
 p{
     text-align: center;
     font-size: 25px;
