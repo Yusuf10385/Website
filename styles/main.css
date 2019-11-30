@@ -8,15 +8,6 @@ body{
     background:url(../images/dark.jpg) ;
     background-size: cover;
 }
-/*These are the properties for the header*/
-h1{
-    text-align: center;
-    color: whitesmoke;
-    font-family: 'Indie Flower', cursive;
-    font-size: 50px;
-
-}
-
 .nav ul {
     list-style: none;
     text-align: end;
@@ -24,20 +15,42 @@ h1{
     margin: 0;
 }
 .nav li{
-    display:inline;
-    top: 40px;
+    display:inline-block;
+    position: relative;
+    top: 30px;
 }
 .nav a{
+    transition: .4s;
     text-decoration: none;
     color: white;
     display: inline;
     padding: 15px;
     text-transform: uppercase;
 }
+.nav a:hover{
+    background-color: #fff;
+    color: black;
+}
+ul li.active a{
+    background: #fff;
+    color: black;
+
+}
+
+/*These are the properties for the header*/
+h1{
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Indie Flower', cursive;
+    font-size: 50px;
+    
+
+}
+
 /*this line of code adjusts the position of all the icons*/
 .social-menu ul {
     position: fixed;
-    top: 91%;
+    top: 93%;
     left: 15%;
     margin: 0;
     padding: 0;
