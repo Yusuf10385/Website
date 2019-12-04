@@ -5,7 +5,7 @@
 /*This sets the font size and the background image*/
 body{
     font: 14px Georgia, serif;
-    background:url(../images/dark.jpg) ;
+    background:url(../images/comp.jpg) ;
     background-size: cover;
 }
 .nav ul {
@@ -115,6 +115,7 @@ h1{
     position:fixed;
     display: block;
     left:560px;
+    bottom: 35%;
     width:240px;height:160;
     border-radius: 50%;
     transition:opacity 3s ease-in-out;
