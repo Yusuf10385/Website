@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact</title>
     <link rel="stylesheet" href="styles/main.css" type="text/css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!--https://www.youtube.com/watch?v=qlCIXXhSX6Y&t=529s-->
-    <div id="foot"> <!--This ID is going to be 100% of height of the browser-->
-        <div id="mains1"> <!--This ID will contain all of the contents of the website-->
+    <div id="foot">
+        <div id="mains4">
             <div class="nav"> <!--This is the navigation bar from class code-->
                 <ul>
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li class="active"><a href="contact.html">Contact</a></li>
                     <li><a href="CV.html">CV</a></li>
-                </ul>  
+                </ul>
+            </div>               
+            <div class="frm"><!--This is the header or the title of the page-->
+                <h1>Contact form</h1>
+                <h2>Please fill out the form</h2>
             </div>
-            <h1>Hi, I'm Yusuf</h1><!--This is the header or the title of the page-->
-            <!--https://www.youtube.com/watch?v=Sm72hlTVOOg-->
-            <!--Two images will be stored in the browser to fade one image to another image on hover-->
-            <div id="ih">
-                <img class="bottom" src="images/mac1.jpg" alt=bottom />
-                <img class="top" src="images/mac.jpg" alt=top />
+            <div class="contact-form">
+                <form id="myform" method="post" action="thanks.html">
+                    <input placeholder="Your name" name="name" type="text" class="control" required><br>
+                    <input placeholder="Your email" name="email" type="email" class="control" required><br>
+                    <textarea name="message" class="control" placeholder="Your message" rows="6" required></textarea><br>
+                    <input type="submit" class="control submit" value="SEND">
+                </form>
             </div>
 
-            
         </div>
+            
     </div>
-
-    <!--https://www.youtube.com/watch?v=vsBaCblIOuQ&t=225s-->
     <footer id="footers">
         <div class="inner-footer"> <!--This is for the different footer sections-->
-            <div class="footer-items1">
+            <div class="footer-items">
                 <!--Links of the navigation bar are going to be placed in the footer-->
                 <h4>Quick Links</h4>
                 <div class="border"></div> <!--This is just a border to seperate the header with its contents-->
@@ -71,7 +72,6 @@
         </div>
 
     </footer>
-
+    
 </body>
-
 </html>

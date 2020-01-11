@@ -1,19 +1,25 @@
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 /*This sets the font size and the background image*/
-body{
+html, body{
     font: 14px Georgia, serif;
-    background:url(../images/comp.jpg) ;
+    background:url(../images/comp5.jpg) ;
     background-size: cover;
+    height: 100%;
+    
 }
+/*This sets the properties for the navigation bar, for example, list-style set to none to remove the bullet points*/
 .nav ul {
     list-style: none;
     text-align: end;
     padding: 0;
     margin: 0;
+    font-family: 'Cabin', sans-serif;
 }
+/*This controls the positioning of the navigation bar*/
 .nav li{
     display:inline-block;
     position: relative;
@@ -27,18 +33,27 @@ body{
     padding: 15px;
     text-transform: uppercase;
 }
+@media screen and (max-width: 375px){
+    .nav a{
+        padding: 7px;
+    }
+}
+/*This is the hover effect on the navigation bar*/
 .nav a:hover{
     background-color: #fff;
     color: black;
 }
+/* This is again for the nav bar when the page is active, to help the user to know which page they are on*/
 ul li.active a{
     background: #fff;
     color: black;
 
 }
 
+
 /*These are the properties for the header*/
 h1{
+    margin: 1cm;
     text-align: center;
     color: whitesmoke;
     font-family: 'Indie Flower', cursive;
@@ -46,115 +61,64 @@ h1{
     font-weight: bold;
 }
 
-/*this line of code adjusts the position of all the icons*/
-.social-menu ul {
-    position: fixed;
-    top: 93%;
-    left: 15%;
-    margin: 0;
-    padding: 0;
-    transform:translate(-50%, -50%);
-    display: flex;
-}
-/*https://www.youtube.com/watch?v=hqlu47FX_q8*/
-/*this removes the bullet points and creates 15px of space between the icons*/
-.social-menu ul li {
-    list-style: none;
-    margin: 0 15px;
-}
-.social-menu ul li .fa {
-    font-size: 30px;
-    line-height: 60px;
-    transition: .6s;
-}
-.social-menu ul li .fa:hover{
-    color:#fff;
-}
-.social-menu ul li a {
-    position: relative;
-    display: block;
-    width: 60px;
-    height: 60px;
+
+
+/*https://www.youtube.com/watch?v=Sm72hlTVOOg, https://www.youtube.com/watch?v=-_ENJ2tRNso*/ 
+/*This states the positioning and size of the div element #ih*/
+#ih {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "fade";
+    width:240px;height:160px;
     border-radius: 50%;
-    background-color: #fff;
-    text-align: center;
-    transition: .6s;
-    box-shadow: 0 5px 4px rgba(0,0,0,.5);
+    position: relative;
+    margin: 10px auto;
+
 }
-/*these are the code for hover*/
-.social-menu ul li a:hover{
-    transform: translate(0, -10px);
+/*These are the properties for the two images that are positioned on top of each other*/
+.top{
+    height:160px;
+    width: 240px;
+    border-radius: 50%;
+    grid-area: fade;
+    align-self: center;
+    justify-self: center;
 }
-/*this determines the colour of the icons*/
-.social-menu ul li:nth-child(1) a:hover {
-    background-color:#3b5999;
-}
-.social-menu ul li:nth-child(2) a:hover {
-    background-color:#55acee;
-}
-.social-menu ul li:nth-child(3) a:hover {
-    background-color:#171515;
-}
-.social-menu ul li:nth-child(4) a:hover {
-    background-color:#0077B5;
+.bottom{
+    height:160px;
+    width: 240px;
+    border-radius: 50%;
+    grid-area: fade;
+    align-self: center;
+    justify-self: center;
 }
 
-/*https://www.youtube.com/watch?v=Sm72hlTVOOg*/
-/*This states the positioning and size of the div element #ih*/
-#ih{
-    position: relative;
-    height:160px;
-    width:240px;
-    margin: 10px auto;
-    
-}
-/*These properties suggest how the image is going to be positioned as well as the size*/
-/*The transition also states how long the image is going to fade to the next image, in this case 3seconds*/
-#ih img{
-    position:fixed;
-    display: block;
-    left:560px;
-    bottom: 35%;
-    width:240px;height:160;
-    border-radius: 50%;
-    transition:opacity 3s ease-in-out;
-}
-/*This property causes a smooth fade transition*/
+/*Chnages and fades out image on hover*/
 #ih img.top:hover{
     opacity:0;
+    transition:opacity 3s ease-in-out;
+
 }
-/*https://www.thesitewizard.com/css/rectangular-box-border.shtml*/
-/* This sets the size and position of the border around the block of text*/
-.boxed{
-    position: relative;
-    border:5px solid black;
-    height:auto;
-    width:420px;
-    margin: 10px auto;
-}
-/*This code styles how the paragraph in the border is going to look like*/
-p{
-    text-align: center;
-    font-size: 25px;
-    font-style: oblique;
-    color: white
-}
+
+
+
 :root {
     font-size: 75.5%;
     font-family: 'Indie Flower', cursive;
 }
 
-
 hr {
     margin-top: 1rem;
-    margin-bottom: 1rcm;
+    margin-bottom: 1rem;
     border: 0;
-    border-top: 1px solid rgba(0,0,0,0,0);
+    
 }
 .container {
     width: 96rem;
     margin: 2rem auto;
 }
+
 .gallery-item {
     max-width: 100%;
     border-radius: 5px;
@@ -169,6 +133,8 @@ hr {
     grid-gap: 1.5rem;
     grid-auto-rows: minmax(150px, auto);
 }
+
+
 .image {
     opacity: 1;
     display: block;
@@ -202,3 +168,289 @@ hr {
     padding: 16px 32px;
     font-family: 'Indie Flower', cursive;
 }
+@media (max-width:400px){
+    .gallery-item,
+    body {
+        /*max-width: 30%;*/
+        grid-column: 2;
+        font-family: Oswald, sans-serif;
+        text-align: left;
+    }
+    div.container, h1{
+        /* text-align: left; */
+        text-align: center;
+        /* margin-left: 2em*/
+    }
+    div.text {
+        font-size: 2.5em;
+    }
+}
+@media (min-width: 900px) {
+    .gallery{
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
+}
+/*https://www.youtube.com/watch?v=vsBaCblIOuQ&t=225s*/
+/*this ID covers the entire height of the browser*/
+#foot {
+    min-height: 100%;
+}
+/* the overflow has been set to auto for much more content inside the page*/
+/*padding bottom is the height of the footer*/ 
+/*the height will differ for each page*/
+#mains1{
+    overflow: auto;
+    padding-bottom: 100px;
+    height: 560px;
+    
+}
+#mains2{
+    overflow: auto;
+    padding-bottom: 100px;
+    height: 750px;
+    
+}
+#mains3{
+    overflow: auto;
+    padding-bottom: 100px;
+    height: 940px;
+    
+}
+#mains4{
+    overflow: auto;
+    padding-bottom: 100px;
+    height: 600px;
+    
+}
+/*this sets the properties of the footer*/
+#footers{
+    position: relative;
+    height: 235px;
+    margin-top: -100px;
+    clear: both;
+    background-color: #00121b;
+}
+@media screen and (max-width: 375px){
+ #footers{
+     height: 410px;
+ }   
+}
+
+.inner-footer{
+    width:95%;
+    margin: auto;
+    padding: 30px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+}
+/*Items in the footer*/
+.footer-items {
+    width:25%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+@media screen and (max-width:375px){
+    .footer-items{
+        width: auto;
+        margin-right: 85px;
+    }
+}
+.footer-items1 {
+    width:25%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+@media screen and (max-width:375px){
+    .footer-items1{
+        width: auto;
+        margin-right: 185px;
+    }
+}
+/*This styles the headers that are inside the footer "Contacts & Quick Links"*/
+h4{
+    margin: 10px 0;
+    color: grey;
+    font-size: 16px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+/*This sets a border between the headers and the contents in the footer*/
+.border {
+    height: 2px;
+    width: 40px;
+    background: #ff9800;
+}
+/*This sets all the ul elements*/
+ul {
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+ul a {
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+ul a:hover {
+    color: #ff9800
+}
+ul li {
+    margin-right: 20px;
+}
+.cv-contact{
+    color: black;
+    letter-spacing: 0.5px;
+    font-size: 25px;
+    margin-left: 56px;
+    margin-top: -40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.social-media{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.social-media a{
+    text-decoration: none;
+}
+.social-media i{
+    height: 15px;
+    width: 15px;
+    margin: 20px 5px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 50%;
+    border: 1px solid grey;
+    transition: 0.3s;
+
+}
+.social-media i:hover {
+    background: grey;
+}
+/*This is the title in the CV page*/
+h3 {
+    margin: 1.5cm;
+    font-size: 50px;
+    color: whitesmoke;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+}
+/*This creates an area where the header is going to be placed*/
+header {
+    width: 100%;
+    height:220px;
+    float:left;
+    
+}
+/*This specifies that all the contents within the header will be in the center*/
+.centre {
+    text-align: center;
+}
+
+/*Properties for the left column will be the same for the right*/
+.leftColumn{
+    width: 50%;
+    height: 700px;
+    float:left;
+    background-color:white;
+}
+.rightColumn{
+    width: 50%;
+    height:700px;
+    float: right;
+    background-color:white;
+    
+}
+/*Properties for the heading class in the CV page*/
+.heading{
+    font-size: 28px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    color: #383839;
+    font-family: 'Times New Roman', Times, serif;
+}
+/*Subtitle class*/
+.subtitle{
+    position: relative;
+    bottom: 50px;
+    color: #383839;
+    margin: 0px;
+    margin-left: 56px;
+    font-size: 22px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 80px;
+}
+.uni{
+    position: relative;
+    bottom: 50px;
+    font-size: 22px;
+    color: #383839;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.date{
+    position: relative;
+    bottom: 90px;
+    color: #383839;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    margin-top: -40px;
+    margin-left: 56px;
+}
+.bach{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    margin-top: -130px;
+    margin-left: 56px;
+}
+.frm{
+    text-align: center;
+}
+h2{
+    color:whitesmoke;
+    margin-bottom:10px;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    font-size: 34px;
+}
+.contact-form{
+    text-align: center;
+}
+.control{
+    width: 600px;
+    background:transparent;
+    border:none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+input{
+    height: 45px;
+}
+form .submit{
+    margin-right: 13px;
+    color: white;
+    background: grey;
+    border-color: transparent;
+    letter-spacing: 2px;
+}
+form .submit:hover{
+    background: green;
+}
+
+
+
+
