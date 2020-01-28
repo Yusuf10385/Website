@@ -114,10 +114,11 @@ hr {
     border: 0;
     
 }
-.container {
+.container{
     width: 96rem;
     margin: 2rem auto;
 }
+
 
 .gallery-item {
     max-width: 100%;
@@ -145,17 +146,9 @@ hr {
     object-fit: cover;
 }
 .middle { 
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align:center;
-}
-.gallery-item:hover .image {
-    filter: grayscale(1);
-}
+    text-align: center; 
+} 
+
 .gallery-item:hover .middle {
     opacity: 1;
 }
@@ -168,28 +161,7 @@ hr {
     padding: 16px 32px;
     font-family: 'Indie Flower', cursive;
 }
-@media (max-width:400px){
-    .gallery-item,
-    body {
-        /*max-width: 30%;*/
-        grid-column: 2;
-        font-family: Oswald, sans-serif;
-        text-align: left;
-    }
-    div.container, h1{
-        /* text-align: left; */
-        text-align: center;
-        /* margin-left: 2em*/
-    }
-    div.text {
-        font-size: 2.5em;
-    }
-}
-@media (min-width: 900px) {
-    .gallery{
-        grid-template-columns: repeat(3, minmax(300px, 1fr));
-    }
-}
+
 /*https://www.youtube.com/watch?v=vsBaCblIOuQ&t=225s*/
 /*this ID covers the entire height of the browser*/
 #foot {
@@ -207,7 +179,7 @@ hr {
 #mains2{
     overflow: auto;
     padding-bottom: 100px;
-    height: 750px;
+    height: 1008px;
     
 }
 #mains3{
@@ -230,6 +202,7 @@ hr {
     clear: both;
     background-color: #00121b;
 }
+/*This is the media query for the footer*/
 @media screen and (max-width: 375px){
  #footers{
      height: 410px;
@@ -451,6 +424,13 @@ form .submit:hover{
     background: green;
 }
 
+@media only screen and (max-width: 710px){
+    .nav ul a{
+        margin-top: 10px;
+        display: block;
+    }
+    
+}
 
 
 
