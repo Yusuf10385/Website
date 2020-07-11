@@ -1,4 +1,4 @@
 # Website
 
 Image
-![example](example.png"example")
+![example](example.png)
