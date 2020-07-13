@@ -1,5 +1,5 @@
 // https://codepen.io/zchee/pen/ogzvZZ
-//https://www.hellojava.com/a/55389.html
+// https://www.hellojava.com/a/55389.html
 (function () {
   'use strict';
 
@@ -30,4 +30,4 @@ function currentDate() {
   document.getElementById("todayDate").innerHTML = Date();
 }
 
-//the endh
+//the end
