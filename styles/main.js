@@ -26,7 +26,7 @@
 //https://www.youtube.com/watch?v=bkvH28PXLWc
 
 //Function used to display current date and time
-function currentDate(){
+function currentDate() {
   document.getElementById("todayDate").innerHTML = Date();
 }
 

@@ -1,7 +1,9 @@
 # Website
 
-Image
-![example](example.png)
-
 HTML Validation
+
 ![HTML](images/html.png)
+
+CSS Validation
+
+![CSS](images/css.png)
